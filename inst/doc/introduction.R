@@ -1,4 +1,4 @@
-## ---- include = FALSE---------------------------------------------------------
+## ----include = FALSE----------------------------------------------------------
 knitr::opts_chunk$set(collapse = TRUE,
                       comment = "#>")
 knitr::opts_chunk$set(fig.width = 7, fig.height = 5)
@@ -31,7 +31,7 @@ knitr::opts_chunk$set(fig.width = 7, fig.height = 5)
 #    RNA_count_assay = 'RNA'
 #  )
 
-## ---- eval = FALSE------------------------------------------------------------
+## ----eval = FALSE-------------------------------------------------------------
 #  export_ATAC_scANANSE(
 #    pbmc,
 #    min_cells <- 25,
@@ -40,7 +40,7 @@ knitr::opts_chunk$set(fig.width = 7, fig.height = 5)
 #    ATAC_peak_assay = 'peaks'
 #  )
 
-## ---- eval = FALSE------------------------------------------------------------
+## ----eval = FALSE-------------------------------------------------------------
 #  contrasts <-  list('B-naive_B-memory',
 #                     'B-memory_B-naive',
 #                     'B-naive_CD16-Mono',
@@ -55,7 +55,7 @@ knitr::opts_chunk$set(fig.width = 7, fig.height = 5)
 #    additional_contrasts = contrasts
 #  )
 
-## ---- eval = FALSE------------------------------------------------------------
+## ----eval = FALSE-------------------------------------------------------------
 #  DEGS_scANANSE(
 #    pbmc,
 #    min_cells <- 25,
@@ -64,19 +64,19 @@ knitr::opts_chunk$set(fig.width = 7, fig.height = 5)
 #    additional_contrasts = contrasts
 #  )
 
-## ---- eval = FALSE------------------------------------------------------------
+## ----eval = FALSE-------------------------------------------------------------
 #  pbmc <- import_seurat_scANANSE(pbmc,
 #                                 cluster_id = 'predicted.id',
 #                                 anansnake_inf_dir = "./analysis/influence/")
 
-## ---- eval = FALSE------------------------------------------------------------
+## ----eval = FALSE-------------------------------------------------------------
 #  TF_influence <- per_cluster_df(pbmc,
 #                                 assay = 'influence',
 #                                 cluster_id = 'predicted.id')
 #  
 #  head(TF_influence)
 
-## ---- eval = FALSE------------------------------------------------------------
+## ----eval = FALSE-------------------------------------------------------------
 #  highlight_TF1 <- c('STAT4', 'MEF2C')
 #  
 #  DefaultAssay(object = pbmc) <- "RNA"

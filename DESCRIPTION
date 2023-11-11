@@ -1,6 +1,6 @@
 Package: AnanseSeurat
 Title: Construct ANANSE GRN-Analysis Seurat
-Version: 1.1.0
+Version: 1.2.0
 Authors@R: c(
     person(given = "Jos", family ="Smits", email = "Jsmits@science.ru.nl", role = c("aut", "cre","cph"),
            comment = c(ORCID = "0000-0001-5858-3905")),
@@ -16,18 +16,18 @@ License: Apache License (>= 2)
 BugReports: https://github.com/JGASmits/AnanseSeurat/issues
 URL: https://github.com/JGASmits/AnanseSeurat/
 Encoding: UTF-8
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.3
 Imports: dplyr, ggplot2, ggpubr, magrittr, patchwork, png, purrr,
-        rlang, Seurat, stringr, utils
+        rlang, Seurat, stringr, utils,
 Suggests: covr, knitr, rmarkdown, Signac, testthat (>= 3.0.0)
 Config/testthat/edition: 3
 VignetteBuilder: knitr
 Depends: R (>= 3.50)
 NeedsCompilation: no
-Packaged: 2023-01-25 09:13:52 UTC; jsmits
+Packaged: 2023-11-11 20:53:08 UTC; jossm
 Author: Jos Smits [aut, cre, cph] (<https://orcid.org/0000-0001-5858-3905>),
   Huiqing Jo Zhou [aut, fnd, cph]
     (<https://orcid.org/0000-0002-2434-3986>)
 Maintainer: Jos Smits <Jsmits@science.ru.nl>
 Repository: CRAN
-Date/Publication: 2023-01-25 10:10:18 UTC
+Date/Publication: 2023-11-11 21:43:17 UTC

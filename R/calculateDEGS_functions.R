@@ -5,6 +5,7 @@
 #' @param min_cells minimum of cells a cluster needs to be exported
 #' @param output_dir directory where the files are outputted
 #' @param cluster_id ID used for finding clusters of cells
+#' @param genome path to the genome folder used for the anansnake config file
 #' @param RNA_count_assay assay containing the RNA data
 #' @param additional_contrasts additional contrasts to add
 #' between clusters within cluster_ID
@@ -17,6 +18,7 @@ DEGS_scANANSE <- function(seurat_object,
                           output_dir,
                           min_cells = 50,
                           cluster_id = 'seurat_clusters',
+                          genome = './scANANSE/data/hg38',
                           RNA_count_assay = "RNA",
                           additional_contrasts = 'None') {
   if (missing(output_dir)) {
@@ -55,7 +57,8 @@ DEGS_scANANSE <- function(seurat_object,
       paste0(
         output_dir,
         '/deseq2/',
-        'hg38-anansesnake_',
+		basename(genome),
+        '-anansesnake_',
         comparison1,
         '_',
         comparison2,

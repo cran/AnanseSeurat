@@ -4,17 +4,23 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/JGASmits/AnanseSeurat/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/JGASmits/AnanseSeurat/actions/workflows/R-CMD-check.yaml)
-[![codecov](https://codecov.io/github/JGASmits/AnanseSeurat/branch/main/graph/badge.svg?token=0XKWAD0KJ7)](https://codecov.io/github/JGASmits/AnanseSeurat)
+[![codecov](https://codecov.io/github/JGASmits/AnanseSeurat/branch/main/graph/badge.svg?token=0XKWAD0KJ7)](https://app.codecov.io/github/JGASmits/AnanseSeurat)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/AnanseSeurat)](https://cran.r-project.org/package=AnanseSeurat)
 <!-- badges: end -->
 
 The `AnanseSeurat` package takes pre-processed clustered single cell
 objects of scRNAseq and scATACseq or a multiome combination, and
-generates files for gene regulatory network (GRN) analysis.
+generates files for gene regulatory network (GRN) analysis. It is part 
+of the scANANSE pipeline. <https://doi.org/10.12688/f1000research.130530.1>
 
 ## Installation
 
-`AnanseSeurat` can be installed using
+`AnanseSeurat` can be installed from CRAN using
 
+``` r
+install.packages('AnanseSeurat')
+```
+Or to install the developmental branch from github:
 ``` r
 library(devtools) # Tools to Make Developing R Packages Easier # Tools to Make Developing R Packages Easier
 Sys.unsetenv("GITHUB_PAT")
@@ -87,10 +93,10 @@ anansnake \
 --resources mem_mb=48_000 --cores 12
 ```
 
-### import ANANSE results back to your single-cell object
+### import ANANSE results back to your single cell object
 
-After running Anansnake, you can import the TF influence scores back into
-your single-cell object of choice
+After running Anansnake, you can import the TF influence scores back
+into your single cell object of choice
 
 ``` r
 pbmc <- import_seurat_scANANSE(pbmc,
@@ -100,6 +106,12 @@ TF_influence <- per_cluster_df(pbmc,
                                cluster_id = 'predicted.id',
                                assay = 'influence')
 ```
+
+## Citation
+
+> scANANSE gene regulatory network and motif analysis of single-cell clusters [version 1; peer review: awaiting peer review]
+> Jos G.A. Smits, Julian A. Arts, Siebren Frölich, Rebecca R. Snabel, Branco M.H. Heuts, Joost H.A. Martens, Simon J van Heeringen, Huiqing Zhou
+> F1000Research 2023, 12:243 (https://doi.org/10.12688/f1000research.130530.1) 
 
 ### Thanks to:
 
@@ -111,7 +123,7 @@ TF_influence <- per_cluster_df(pbmc,
   correlation analysis
 - Branco Heuts for testing
 
-# Credits
+### Credits
 
 The hex sticker is generated using the
 [`hexSticker`](https://github.com/GuangchuangYu/hexSticker) package.
